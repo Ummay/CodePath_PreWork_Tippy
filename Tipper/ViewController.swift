@@ -37,11 +37,18 @@ class ViewController: UIViewController {
             totalLabel.textColor = UIColor.whiteColor()
         }
         else {
+            tipLabel.textColor = UIColor.blackColor()
+            totalLabel.textColor = UIColor.blackColor()
+
             self.view.backgroundColor = UIColor.whiteColor()
         }
     
     }
-
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        billField.becomeFirstResponder()
+        print("view did appear")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
